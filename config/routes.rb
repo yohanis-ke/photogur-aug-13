@@ -6,4 +6,8 @@ Rails.application.routes.draw do
   get 'pictures/new' => 'pictures#new'
 
   get 'pictures/:id' => 'pictures#create'
+
+  root 'pictures#index'
+  get 'pictures' => 'pictures#index'
+
 end
