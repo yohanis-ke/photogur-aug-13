@@ -5,9 +5,12 @@ Rails.application.routes.draw do
   post 'pictures' => 'pictures#create'
   get 'pictures/new' => 'pictures#new'
 
-  get 'pictures/:id' => 'pictures#create'
+  get 'pictures/:id' => 'pictures#show'
 
   root 'pictures#index'
   get 'pictures' => 'pictures#index'
+
+  get 'pictures/:id/edit' => "pictures#edit"
+  patch 'pictures/:id' => "pictures#update"
 
 end
